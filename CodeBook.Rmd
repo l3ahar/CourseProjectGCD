@@ -1,0 +1,58 @@
+---
+title: "CodeBook"
+output: html_document
+---
+
+## Project Statement
+
+The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.  
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+Here are the data for the project: 
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+* You should create one R script called run_analysis.R that does the following. 
+Merges the training and the test sets to create one data set.
+* Extracts only the measurements on the mean and standard deviation for each measurement. 
+* Uses descriptive activity names to name the activities in the data set
+* Appropriately labels the data set with descriptive variable names. 
+* From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Discussions and Results
+
+Project statement provides data from an experiment on 30 people, collectiong from their wearable device, observing their 6 activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING).  
+
+### Describing Variables
+There are 561 features that are measured or estimated during this experiment. A process needs to be done on the raw data captured from their devices to make them tidy. From the total 561 features in the raw data only a set of them containing mean and standard deviation measurements are desirable to be contained in the tidy dataset. It came down to 86 variables.  
+
+Since the problem statement is not specific about what does it exactly mean by "measurements on the mean and standard deviation", I considered all the features which had "mean" and "std" in their name.  
+
+By reading the documents in the data file which described the features and by converting abbreviations to names, the variable names (column names in the dataset) are human readable now. Activities were specified in labels (1-6) which also got transformed to human readable form (walking, standing, ...) 
+
+### Describing Data
+By going through the steps in the project statement, the final data set is produced as a result of finishing step 5. Since in the resulting data set each variable forms a column, each observation forms a row and the table stores data about one kind of observation, it's a tidy data set. Moreover, in the website containing the data (UCI website) it's been mentioned that all the measurements are normalized to be between [-1,1]. So there won't be any concern about different units for variables.  
+
+The tidy data is wide. Here I assumed different activities are different measurements and each feature for each subject is a variable (participants in the experiment are called subjects.) There are 30 subjects and 86 variables for making the tidy data set, so final data set contains 2580 columns, each representing a single variable, plus one column for Activity names. Since there are 6 different activities, dimention of the data set is 6x2581.
+Each row contains average of variables for a specific activity.
+
+A schematic view of the data looks like the following table.  
+  
+| Activities        | Subject1-Feature1    | Subject1-Feature2 | ... | Subject30-Feature86  | 
+| ------------- |:-------------:|:-------------:|:-------------:| -----:|
+| Walking      | Mean of **Feature1** for **Subject1** when doing the acctivity of **walking** | Mean of **Feature2** for **Subject1** when doing the acctivity of **walking** | ... | Mean of **Feature86** for **Subject30** when doing the acctivity of **walking**
+| Walking upstairs      | Mean of **Feature1** for **Subject1** when doing the acctivity of **walking upstairs**      |   Mean of **Feature2** for **Subject1** when doing the acctivity of **walking upstairs** | ... | Mean of **Feature86** for **Subject30** when doing the acctivity of **walking upstairs**
+| ... | ... | ... | ... | ... | 
+| Laying | ...      |    ... | ...| ...|
+
+### Transformations and Work to Clean up the Data
+Getting data was somehow challenging. Because data was in differnt spaces of a zipfile which could be accessed through a link. After reading and unzipping the zipfile, different parts of data in different folders could get accessible through R.
+
+After attaching different parts of data from different files, cleaning the data was done in 2 steps. First, features with "mean" and "std" were extracted and second, data got reshaped so the mean could be calculated depending on two variables (Activity and Subject.)  
+
+First step got easily done by concatenating different parts of data (train and test) and selecting desirable columns by recognizing patterns of "mean" and "std" in their name using "grepl" command.  
+Second step could be done by using reshape2 package and meltind and casting data into the desirable form.
+
