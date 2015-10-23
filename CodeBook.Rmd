@@ -33,6 +33,99 @@ Since the problem statement is not specific about what does it exactly mean by "
 
 By reading the documents in the data file which described the features and by converting abbreviations to names, the variable names (column names in the dataset) are human readable now. Activities were specified in labels (1-6) which also got transformed to human readable form (walking, standing, ...) 
 
+Here is the list of all the variables for each subject: 
+
+* Time Body Accelaraion -mean()-X                                
+* Time Body Accelaraion -mean()-Y                                 
+* Time Body Accelaraion -mean()-Z                                 
+* Time Body Accelaraion - Standard Deviation ()-X                 
+* Time Body Accelaraion - Standard Deviation ()-Y                 
+* Time Body Accelaraion - Standard Deviation ()-Z                 
+* Time Gravity Accelaraion -mean()-X                              
+* Time Gravity Accelaraion -mean()-Y                              
+* Time Gravity Accelaraion -mean()-Z                              
+* Time Gravity Accelaraion - Standard Deviation ()-X              
+* Time Gravity Accelaraion - Standard Deviation ()-Y              
+* Time Gravity Accelaraion - Standard Deviation ()-Z              
+* Time Body Accelaraion Jerk-mean()-X                             
+* Time Body Accelaraion Jerk-mean()-Y                             
+* Time Body Accelaraion Jerk-mean()-Z                             
+* Time Body Accelaraion Jerk- Standard Deviation ()-X             
+* Time Body Accelaraion Jerk- Standard Deviation ()-Y             
+* Time Body Accelaraion Jerk- Standard Deviation ()-Z             
+* Time Body Gyro-mean()-X                                         
+* Time Body Gyro-mean()-Y                                         
+* Time Body Gyro-mean()-Z                                         
+* Time Body Gyro- Standard Deviation ()-X                         
+* Time Body Gyro- Standard Deviation ()-Y                         
+* Time Body Gyro- Standard Deviation ()-Z                         
+* Time Body GyroJerk-mean()-X                                     
+* Time Body GyroJerk-mean()-Y                                     
+* Time Body GyroJerk-mean()-Z                                     
+* Time Body GyroJerk- Standard Deviation ()-X                     
+* Time Body GyroJerk- Standard Deviation ()-Y                     
+* Time Body GyroJerk- Standard Deviation ()-Z                     
+* Time Body Accelaraion Magnitude-mean()                          
+* Time Body Accelaraion Magnitude- Standard Deviation ()          
+* Time Gravity Accelaraion Magnitude-mean()                       
+* Time Gravity Accelaraion Magnitude- Standard Deviation ()       
+* Time Body Accelaraion Jerk Magnitude-mean()                     
+* Time Body Accelaraion Jerk Magnitude- Standard Deviation ()     
+* Time Body GyroMagnitude-mean()                                  
+* Time Body GyroMagnitude- Standard Deviation ()                  
+* Time Body GyroJerk Magnitude-mean()                             
+* Time Body GyroJerk Magnitude- Standard Deviation ()             
+* Frequency Body Accelaraion -mean()-X                            
+* Frequency Body Accelaraion -mean()-Y                            
+* Frequency Body Accelaraion -mean()-Z                            
+* Frequency Body Accelaraion - Standard Deviation ()-X            
+* Frequency Body Accelaraion - Standard Deviation ()-Y            
+* Frequency Body Accelaraion - Standard Deviation ()-Z            
+* Frequency Body Accelaraion -Mean Frequency()-X                  
+* Frequency Body Accelaraion -Mean Frequency()-Y                  
+* Frequency Body Accelaraion -Mean Frequency()-Z                  
+* Frequency Body Accelaraion Jerk-mean()-X                        
+* Frequency Body Accelaraion Jerk-mean()-Y                        
+* Frequency Body Accelaraion Jerk-mean()-Z                        
+* Frequency Body Accelaraion Jerk- Standard Deviation ()-X        
+* Frequency Body Accelaraion Jerk- Standard Deviation ()-Y        
+* Frequency Body Accelaraion Jerk- Standard Deviation ()-Z        
+* Frequency Body Accelaraion Jerk-Mean Frequency()-X              
+* Frequency Body Accelaraion Jerk-Mean Frequency()-Y              
+* Frequency Body Accelaraion Jerk-Mean Frequency()-Z              
+* Frequency Body Gyro-mean()-X                                    
+* Frequency Body Gyro-mean()-Y                                    
+* Frequency Body Gyro-mean()-Z                                    
+* Frequency Body Gyro- Standard Deviation ()-X                    
+* Frequency Body Gyro- Standard Deviation ()-Y                    
+* Frequency Body Gyro- Standard Deviation ()-Z                    
+* Frequency Body Gyro-Mean Frequency()-X                          
+* Frequency Body Gyro-Mean Frequency()-Y                          
+* Frequency Body Gyro-Mean Frequency()-Z                          
+* Frequency Body Accelaraion Magnitude-mean()                     
+* Frequency Body Accelaraion Magnitude- Standard Deviation ()     
+* Frequency Body Accelaraion Magnitude-Mean Frequency()           
+* Frequency Body Accelaraion Jerk Magnitude-mean()                
+* Frequency Body Accelaraion Jerk Magnitude- Standard Deviation ()
+* Frequency Body Accelaraion Jerk Magnitude-Mean Frequency()      
+* Frequency Body GyroMagnitude-mean()                             
+* Frequency Body GyroMagnitude- Standard Deviation ()             
+* Frequency Body GyroMagnitude-Mean Frequency()                   
+* Frequency Body GyroJerk Magnitude-mean()                        
+* Frequency Body GyroJerk Magnitude- Standard Deviation ()        
+* Frequency Body GyroJerk Magnitude-Mean Frequency()              
+* angle(Time Body Accelaraion Mean,gravity)                       
+* angle(Time Body Accelaraion JerkMean),gravityMean)              
+* angle(Time Body GyroMean,gravityMean)                           
+* angle(Time Body GyroJerkMean,gravityMean)                       
+* angle(X,gravityMean)                                            
+* angle(Y,gravityMean)                                            
+* angle(Z,gravityMean)  
+
+We have 30 subjects, so these variables with be repeated 30 times, each time with the subject name coming before the variable's name.  
+
+**Units** : Variables here are unitless. Because all the values are normalized and they are all in the range of [-1,+1].  
+
 ### Describing Data
 By going through the steps in the project statement, the final data set is produced as a result of finishing step 5. Since in the resulting data set each variable forms a column, each observation forms a row and the table stores data about one kind of observation, it's a tidy data set. Moreover, in the website containing the data (UCI website) it's been mentioned that all the measurements are normalized to be between [-1,1]. So there won't be any concern about different units for variables.  
 

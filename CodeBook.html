@@ -87,6 +87,97 @@ img {
 <p>There are 561 features that are measured or estimated during this experiment. A process needs to be done on the raw data captured from their devices to make them tidy. From the total 561 features in the raw data only a set of them containing mean and standard deviation measurements are desirable to be contained in the tidy dataset. It came down to 86 variables.</p>
 <p>Since the problem statement is not specific about what does it exactly mean by “measurements on the mean and standard deviation”, I considered all the features which had “mean” and “std” in their name.</p>
 <p>By reading the documents in the data file which described the features and by converting abbreviations to names, the variable names (column names in the dataset) are human readable now. Activities were specified in labels (1-6) which also got transformed to human readable form (walking, standing, …)</p>
+<p>Here is the list of all the variables for each subject:</p>
+<ul>
+<li>Time Body Accelaraion -mean()-X<br /></li>
+<li>Time Body Accelaraion -mean()-Y<br /></li>
+<li>Time Body Accelaraion -mean()-Z<br /></li>
+<li>Time Body Accelaraion - Standard Deviation ()-X<br /></li>
+<li>Time Body Accelaraion - Standard Deviation ()-Y<br /></li>
+<li>Time Body Accelaraion - Standard Deviation ()-Z<br /></li>
+<li>Time Gravity Accelaraion -mean()-X<br /></li>
+<li>Time Gravity Accelaraion -mean()-Y<br /></li>
+<li>Time Gravity Accelaraion -mean()-Z<br /></li>
+<li>Time Gravity Accelaraion - Standard Deviation ()-X<br /></li>
+<li>Time Gravity Accelaraion - Standard Deviation ()-Y<br /></li>
+<li>Time Gravity Accelaraion - Standard Deviation ()-Z<br /></li>
+<li>Time Body Accelaraion Jerk-mean()-X<br /></li>
+<li>Time Body Accelaraion Jerk-mean()-Y<br /></li>
+<li>Time Body Accelaraion Jerk-mean()-Z<br /></li>
+<li>Time Body Accelaraion Jerk- Standard Deviation ()-X<br /></li>
+<li>Time Body Accelaraion Jerk- Standard Deviation ()-Y<br /></li>
+<li>Time Body Accelaraion Jerk- Standard Deviation ()-Z<br /></li>
+<li>Time Body Gyro-mean()-X<br /></li>
+<li>Time Body Gyro-mean()-Y<br /></li>
+<li>Time Body Gyro-mean()-Z<br /></li>
+<li>Time Body Gyro- Standard Deviation ()-X<br /></li>
+<li>Time Body Gyro- Standard Deviation ()-Y<br /></li>
+<li>Time Body Gyro- Standard Deviation ()-Z<br /></li>
+<li>Time Body GyroJerk-mean()-X<br /></li>
+<li>Time Body GyroJerk-mean()-Y<br /></li>
+<li>Time Body GyroJerk-mean()-Z<br /></li>
+<li>Time Body GyroJerk- Standard Deviation ()-X<br /></li>
+<li>Time Body GyroJerk- Standard Deviation ()-Y<br /></li>
+<li>Time Body GyroJerk- Standard Deviation ()-Z<br /></li>
+<li>Time Body Accelaraion Magnitude-mean()<br /></li>
+<li>Time Body Accelaraion Magnitude- Standard Deviation ()<br /></li>
+<li>Time Gravity Accelaraion Magnitude-mean()<br /></li>
+<li>Time Gravity Accelaraion Magnitude- Standard Deviation ()<br /></li>
+<li>Time Body Accelaraion Jerk Magnitude-mean()<br /></li>
+<li>Time Body Accelaraion Jerk Magnitude- Standard Deviation ()<br /></li>
+<li>Time Body GyroMagnitude-mean()<br /></li>
+<li>Time Body GyroMagnitude- Standard Deviation ()<br /></li>
+<li>Time Body GyroJerk Magnitude-mean()<br /></li>
+<li>Time Body GyroJerk Magnitude- Standard Deviation ()<br /></li>
+<li>Frequency Body Accelaraion -mean()-X<br /></li>
+<li>Frequency Body Accelaraion -mean()-Y<br /></li>
+<li>Frequency Body Accelaraion -mean()-Z<br /></li>
+<li>Frequency Body Accelaraion - Standard Deviation ()-X<br /></li>
+<li>Frequency Body Accelaraion - Standard Deviation ()-Y<br /></li>
+<li>Frequency Body Accelaraion - Standard Deviation ()-Z<br /></li>
+<li>Frequency Body Accelaraion -Mean Frequency()-X<br /></li>
+<li>Frequency Body Accelaraion -Mean Frequency()-Y<br /></li>
+<li>Frequency Body Accelaraion -Mean Frequency()-Z<br /></li>
+<li>Frequency Body Accelaraion Jerk-mean()-X<br /></li>
+<li>Frequency Body Accelaraion Jerk-mean()-Y<br /></li>
+<li>Frequency Body Accelaraion Jerk-mean()-Z<br /></li>
+<li>Frequency Body Accelaraion Jerk- Standard Deviation ()-X<br /></li>
+<li>Frequency Body Accelaraion Jerk- Standard Deviation ()-Y<br /></li>
+<li>Frequency Body Accelaraion Jerk- Standard Deviation ()-Z<br /></li>
+<li>Frequency Body Accelaraion Jerk-Mean Frequency()-X<br /></li>
+<li>Frequency Body Accelaraion Jerk-Mean Frequency()-Y<br /></li>
+<li>Frequency Body Accelaraion Jerk-Mean Frequency()-Z<br /></li>
+<li>Frequency Body Gyro-mean()-X<br /></li>
+<li>Frequency Body Gyro-mean()-Y<br /></li>
+<li>Frequency Body Gyro-mean()-Z<br /></li>
+<li>Frequency Body Gyro- Standard Deviation ()-X<br /></li>
+<li>Frequency Body Gyro- Standard Deviation ()-Y<br /></li>
+<li>Frequency Body Gyro- Standard Deviation ()-Z<br /></li>
+<li>Frequency Body Gyro-Mean Frequency()-X<br /></li>
+<li>Frequency Body Gyro-Mean Frequency()-Y<br /></li>
+<li>Frequency Body Gyro-Mean Frequency()-Z<br /></li>
+<li>Frequency Body Accelaraion Magnitude-mean()<br /></li>
+<li>Frequency Body Accelaraion Magnitude- Standard Deviation ()<br /></li>
+<li>Frequency Body Accelaraion Magnitude-Mean Frequency()<br /></li>
+<li>Frequency Body Accelaraion Jerk Magnitude-mean()<br /></li>
+<li>Frequency Body Accelaraion Jerk Magnitude- Standard Deviation ()</li>
+<li>Frequency Body Accelaraion Jerk Magnitude-Mean Frequency()<br /></li>
+<li>Frequency Body GyroMagnitude-mean()<br /></li>
+<li>Frequency Body GyroMagnitude- Standard Deviation ()<br /></li>
+<li>Frequency Body GyroMagnitude-Mean Frequency()<br /></li>
+<li>Frequency Body GyroJerk Magnitude-mean()<br /></li>
+<li>Frequency Body GyroJerk Magnitude- Standard Deviation ()<br /></li>
+<li>Frequency Body GyroJerk Magnitude-Mean Frequency()<br /></li>
+<li>angle(Time Body Accelaraion Mean,gravity)<br /></li>
+<li>angle(Time Body Accelaraion JerkMean),gravityMean)<br /></li>
+<li>angle(Time Body GyroMean,gravityMean)<br /></li>
+<li>angle(Time Body GyroJerkMean,gravityMean)<br /></li>
+<li>angle(X,gravityMean)<br /></li>
+<li>angle(Y,gravityMean)<br /></li>
+<li>angle(Z,gravityMean)</li>
+</ul>
+<p>We have 30 subjects, so these variables with be repeated 30 times, each time with the subject name coming before the variable’s name.</p>
+<p><strong>Units</strong> : Variables here are unitless. Because all the values are normalized and they are all in the range of [-1,+1].</p>
 </div>
 <div id="describing-data" class="section level3">
 <h3>Describing Data</h3>
